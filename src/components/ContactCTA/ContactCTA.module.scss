@@ -2,43 +2,56 @@
   padding: 80px 0;
 }
 
-.box {
-  background: #eef3fb;
-  border: 1px solid rgba(32, 35, 83, 0.12);
-  border-radius: 12px;
-  padding: 32px 24px;
-}
-
 .wrap {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+.text {
+  width: 600px;
 }
 
 .badge {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
+
+  gap: 11px;
+  width: 100%;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: #e68d19;
-  border-top: 3px solid #e68d19;
-  padding-top: 6px;
-  font-weight: 600;
-  font-size: 14px;
+}
+
+.badge::before,
+.badge::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: currentColor;
+  opacity: 0.7;
 }
 
 .title {
   margin-top: 14px;
   font-family: var(--font-family);
-  font-weight: 800;
-  font-size: 32px;
-  line-height: 1.2;
-  color: #202353;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 144%;
+  color: #000;
 }
 
 .subtitle {
   margin-top: 12px;
-  font-size: 16px;
-  color: #59607a;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 145%;
+  color: #97999d;
 }
 
 .form {
@@ -48,24 +61,32 @@
 }
 
 .input {
-  height: 44px;
-  padding: 0 12px;
+  border: 1px solid #97999d;
   border-radius: 8px;
-  border: 1px solid rgba(32, 35, 83, 0.2);
+  padding: 12px 16px;
+  width: 450px;
+  height: 56px;
   background: #fff;
-  font-family: var(--font-family);
 }
 
 .button {
   margin-top: 4px;
-  height: 44px;
-  border-radius: 8px;
   border: none;
-  background: #2d3066;
-  color: #fff;
-  font-weight: 600;
+  border-radius: 8px;
+  padding: 16px 41px;
+  width: 450px;
+  height: 56px;
+  background: #323d66;
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0.01em;
+color: #fff;
 }
 
 @media (max-width: 900px) {
-  .wrap { grid-template-columns: 1fr; }
+  .wrap {
+    grid-template-columns: 1fr;
+  }
 }

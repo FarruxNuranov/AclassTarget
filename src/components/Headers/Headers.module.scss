@@ -1,7 +1,6 @@
 .header {
   position: relative; /* for absolute logo positioning */
   box-sizing: border-box;
-  padding-top: 1px; /* prevent top margin-collapse */
   background: linear-gradient(243deg, #202353 0%, #2d3066 38.2%, #949fc0 100%);
 }
 
@@ -27,13 +26,11 @@
   position: absolute;
   top: 80px;
   left: 24px;
-  
-
 
   img {
     width: 103px;
     height: 38px;
-    
+
     display: block;
   }
 }
@@ -49,7 +46,6 @@
 }
 
 .logo img {
-  
   width: auto;
   display: block;
 }
@@ -83,7 +79,6 @@
   font-size: 40px;
   line-height: 100%;
   color: #fff;
-  margin-top: 0; /* avoid collapsing to header top */
 }
 
 .bigNumber {
