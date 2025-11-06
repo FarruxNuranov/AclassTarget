@@ -9,6 +9,11 @@ function Headers() {
         <div className={styles.main}>
           <div className={styles.leftBox}>
             <img
+              className={styles.heroImg}
+              src="/src/assets/images/headersPages.png"
+              alt="HR Hero"
+            />
+            <img
               className={styles.leftBoxLogo}
               src="/src/assets/images/logo.svg"
               alt="Logo"
