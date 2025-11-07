@@ -12,6 +12,9 @@ function Headers() {
             <img
               className={styles.heroImg}
               src={man}
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
               alt="HR Hero"
             />
             <img
