@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Headers.module.scss";
-import { getImg } from "../../utils/getImg";
+import {  man, navLogo, ogon } from "../../utils/getImg";
 
 function Headers() {
   return (
@@ -11,17 +11,17 @@ function Headers() {
           <div className={styles.leftBox}>
             <img
               className={styles.heroImg}
-              src="/src/assets/images/headersPages.png"
+              src={man}
               alt="HR Hero"
             />
             <img
               className={styles.leftBoxLogo}
-              src={getImg('logo')}
+              src={navLogo}
               alt="Logo"
             />
           </div>
           <div className={styles.content}>
-            <div className={styles.badge}> <img src={getImg('ogon')} alt="" />
+            <div className={styles.badge}> <img src={ogon} alt="" />
             <span>Profwssional HR Kursi</span></div>
             <h1 className={styles.title}>
               Hr sohasini o’rganib
