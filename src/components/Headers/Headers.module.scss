@@ -78,12 +78,12 @@
 
   span {
     font-family: var(--font-family);
-font-weight: 500;
-font-size: 16px;
-letter-spacing: 0.06em;
-text-transform: capitalize;
-color: #e68d19;
-}
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    text-transform: capitalize;
+    color: #e68d19;
+  }
 }
 
 .title {
@@ -131,14 +131,15 @@ color: #e68d19;
 @media (max-width: 700px) {
   .header {
     padding-top: 8px; /* reduce top gap */
-    padding-bottom: 24px; /* space so overlap doesn't hit next section */
+    padding-bottom: 24px;
+    background: linear-gradient(320deg, #202353 0%, #2d3066 18.2%, #949fc0 100%);
+
   }
   .main {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 0; /* avoid extra space between image and card */
-   
   }
 
   .leftBox {
@@ -153,7 +154,7 @@ color: #e68d19;
   .content {
     max-width: 100%;
     width: 100%;
-    
+
     background: #ffffff;
     color: #202353;
     border-radius: 24px;
