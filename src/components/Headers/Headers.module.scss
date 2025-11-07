@@ -130,6 +130,7 @@ color: #e68d19;
 /* Mobile */
 @media (max-width: 700px) {
   .header {
+    padding-top: 8px; /* reduce top gap */
     padding-bottom: 24px; /* space so overlap doesn't hit next section */
   }
   .main {
@@ -143,7 +144,7 @@ color: #e68d19;
   .leftBox {
     max-width: none;
     width: 100%;
-    height: 360px;
+    height: 320px;
     background: none; /* use <img> on mobile */
     position: relative;
     z-index: 1;
@@ -156,8 +157,8 @@ color: #e68d19;
     background: #ffffff;
     color: #202353;
     border-radius: 24px;
-    padding: 20px 16px 24px;
-    margin-top: -28px; /* overlap image slightly like mockup */
+    padding: 16px 14px 20px;
+    margin-top: -12px; /* lighter overlap */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     align-items: center;
     text-align: center;
@@ -171,7 +172,7 @@ color: #e68d19;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center bottom;
+    object-position: center top;
   }
 
   .leftBoxLogo {
