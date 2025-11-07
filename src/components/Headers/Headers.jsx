@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Headers.module.scss";
 import {  man, navLogo, ogon } from "../../utils/getImg";
 
 function Headers() {
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = man;
+    document.head.appendChild(link);
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
   return (
     <header className={styles.header}>
       
