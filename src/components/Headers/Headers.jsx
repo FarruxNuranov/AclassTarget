@@ -20,7 +20,8 @@ function Headers() {
             />
           </div>
           <div className={styles.content}>
-            <div className={styles.badge}>🔥 Profwssional HR Kursi</div>
+            <div className={styles.badge}> <img src="/src/assets/images/ogon.svg" alt="" />
+            <span>Profwssional HR Kursi</span></div>
             <h1 className={styles.title}>
               Hr sohasini o’rganib
               <span className={styles.bigNumber}>4 000 000</span>

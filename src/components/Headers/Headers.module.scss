@@ -1,6 +1,7 @@
 .header {
   position: relative; /* for absolute logo positioning */
   box-sizing: border-box;
+  padding-top: 40px;
   background: linear-gradient(243deg, #202353 0%, #2d3066 38.2%, #949fc0 100%);
 }
 
@@ -24,7 +25,7 @@
 
 .leftBoxLogo {
   position: absolute;
-  top: 80px;
+  top: 40px;
   left: 24px;
 
   img {
@@ -67,14 +68,22 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
   line-height: 1;
   padding: 10px 14px;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffc96b; /* warm accent like in mock */
+
   width: fit-content;
+
+  span {
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+letter-spacing: 0.06em;
+text-transform: capitalize;
+color: #e68d19;
+}
 }
 
 .title {
@@ -92,6 +101,7 @@
   font-size: 72px;
   line-height: 100%;
   color: #e68d19;
+  margin: 12px 0;
 }
 
 .subtitle {

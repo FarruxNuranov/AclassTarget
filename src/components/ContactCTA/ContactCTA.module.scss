@@ -70,6 +70,11 @@
   background: #fff;
 }
 
+.select {
+  width: 450px;
+   height: 56px;
+}
+
 .button {
   margin-top: 4px;
   border: none;
@@ -95,6 +100,10 @@
   }
 
   .input {
+    width: 100%;
+  }
+
+  .select {
     width: 100%;
   }
 }
