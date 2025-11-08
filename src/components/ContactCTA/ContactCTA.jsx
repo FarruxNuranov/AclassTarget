@@ -20,7 +20,7 @@ function ContactCTA() {
   const regionOptions = [
     { value: "andijon", label: "Andijon" },
     { value: "buxoro", label: "Buxoro" },
-    { value: "fargona", label: "Fargʻona" },
+    { value: "fargona", label: "Fargʻona"},
     { value: "jizzax", label: "Jizzax" },
     { value: "namangan", label: "Namangan" },
     { value: "navoiy", label: "Navoiy" },
