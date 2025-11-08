@@ -168,49 +168,18 @@ export default function FeedbackSection() {
       {/* ======= Модальное окно с видео-слайдером ======= */}
       {modalOpen && (
         <div className={styles.modalOverlay} onClick={closeModal}>
-          <div className={styles.modalBox}>
+          <div className={styles.modalBox} onClick={(e) => e.stopPropagation()}>
             <button className={styles.closeBtn} onClick={closeModal}>
               <FiX />
             </button>
-            <div
-              className={styles.modalContent}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <Swiper
-                modules={[Navigation]}
-                navigation={{
-                  prevEl: `.${styles.prevBtn}`,
-                  nextEl: `.${styles.nextBtn}`,
-                }}
-                onSwiper={(swiper) => (swiperRef.current = swiper)}
-                onSlideChange={(s) => setActiveIdx(s.realIndex)}
-                initialSlide={startIndex}
-                slidesPerView={1}
-                className={styles.modalSlider}
-              >
-                {feedbacks.map((f, i) => (
-                  <SwiperSlide key={i} className={styles.modalSlide}>
-                    <div className={styles.videoWrapper}>
-                      {activeIdx === i && (
-                        <iframe
-                          src={`https://www.youtube.com/embed/${f.videoId}?autoplay=1&controls=1`}
-                          frameBorder="0"
-                          allow="autoplay; encrypted-media"
-                          allowFullScreen
-                          title={f.text}
-                        />
-                      )}
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-
-              <button className={styles.prevBtn}>
-                <FiArrowLeft />
-              </button>
-              <button className={styles.nextBtn}>
-                <FiArrowRight />
-              </button>
+            <div className={styles.videoWrapper}>
+              <iframe
+                src={`https://www.youtube.com/embed/${feedbacks[activeIdx].videoId}?autoplay=1&controls=1`}
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title={feedbacks[activeIdx].text}
+              />
             </div>
           </div>
         </div>
