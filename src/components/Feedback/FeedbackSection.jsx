@@ -59,6 +59,7 @@ export default function FeedbackSection() {
   const [activeIdx, setActiveIdx] = useState(0);
   const swiperRef = useRef(null);
   const [mainActiveIdx, setMainActiveIdx] = useState(0);
+  const [mobileActiveIdx, setMobileActiveIdx] = useState(0);
 
   const openModalAt = (idx) => {
     setStartIndex(idx);
@@ -79,8 +80,8 @@ export default function FeedbackSection() {
         <p className={styles.label}>FIKRLAR</p>
         <h2 className={styles.title}>O'quvchilarning fikrlari</h2>
 
-        {/* ====== ОБЁРТКА: контейнер, в который точно влезают 3 карточки ====== */}
-        <div className={styles.sliderWrapper}>
+        {/* ====== Десктопный слайдер ====== */}
+        <div className={`${styles.sliderWrapper} ${styles.desktopOnly}`}>
           <Swiper
             modules={[EffectCoverflow, Pagination]}
             effect="coverflow"
@@ -111,6 +112,44 @@ export default function FeedbackSection() {
                 <div className={styles.card}>
                   <img src={f.image} alt={f.text} />
                   {i === mainActiveIdx && (
+                    <button
+                      className={styles.playBtn}
+                      onClick={() => openModalAt(i)}
+                    >
+                      ▶
+                    </button>
+                  )}
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* ====== Мобильный слайдер (1 карточка) ====== */}
+        <div className={`${styles.sliderWrapper} ${styles.mobileOnly}`}>
+          <Swiper
+            modules={[Pagination]}
+            effect="slide"
+            centeredSlides={false}
+            slidesPerView={1}
+            loop={true}
+            spaceBetween={10}
+            grabCursor={true}
+            initialSlide={mobileActiveIdx}
+            pagination={{ clickable: false }}
+            className={styles.slider}
+            onSlideChange={(swiper) => {
+              setMobileActiveIdx(swiper.realIndex);
+            }}
+            onSwiper={(swiper) => {
+              setMobileActiveIdx(swiper.realIndex);
+            }}
+          >
+            {feedbacks.map((f, i) => (
+              <SwiperSlide key={i} className={styles.slide}>
+                <div className={styles.card}>
+                  <img src={f.image} alt={f.text} />
+                  {i === mobileActiveIdx && (
                     <button
                       className={styles.playBtn}
                       onClick={() => openModalAt(i)}

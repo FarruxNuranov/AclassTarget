@@ -7,6 +7,10 @@
   text-align: center;
 }
 
+/* Видимость для двух отдельных слайдеров */
+.desktopOnly { display: block; }
+.mobileOnly { display: none; }
+
 .label {
   font-family: var(--font-family);
   font-weight: 700;
@@ -309,11 +313,15 @@
   right: 12px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .section {
     padding-top: 52px;
     padding-bottom: 52px;
   }
+
+  /* Переключение видимости: на мобилке показываем мобильный слайдер */
+  .desktopOnly { display: none; }
+  .mobileOnly { display: block; }
 
   .card {
     min-width: 280px;
