@@ -39,7 +39,7 @@ function ContactCTA() {
             <div className={styles.text}>
               <div className={styles.badge}>ALOQA</div>
               <h3 className={styles.title}>
-                Xoziroq ariza qoldiring va 5ta darsni bepulga oling!
+                Hoziroq ariza qoldiring va 5ta darsni bepulga oling!
               </h3>
               <p className={styles.subtitle}>
                 Aloqa uchun so’rovni to’ldiring — yaqin orada siz bilan
