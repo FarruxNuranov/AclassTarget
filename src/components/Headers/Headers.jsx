@@ -35,13 +35,21 @@ function Headers() {
           </div>
           <div className={styles.content}>
             <div className={styles.badge}> <img src={ogon} alt="" />
-            <span>Profwssional HR Kursi</span></div>
+            <span>Professional HR Kursi</span></div>
             <h1 className={styles.title}>
               Hr sohasini o’rganib
               <span className={styles.bigNumber}>4 000 000</span>
               so’mdan daromdan toping
             </h1>
-            <button className={styles.cta}>Bepul dars olish</button>
+            <button
+              className={styles.cta}
+              onClick={() => {
+                const el = document.getElementById('contact-cta');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+            >
+              Bepul dars olish
+            </button>
           </div>
         </div>
       </div>

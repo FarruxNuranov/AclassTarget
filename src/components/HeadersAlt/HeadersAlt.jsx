@@ -17,7 +17,15 @@ function HeadersAlt() {
           <h1 className={styles.title}>
             Ariza qoldiring va 5 darsni bepulga oling! 
           </h1>
-          <button className={styles.cta}>Bepul dars olish</button>
+          <button
+            className={styles.cta}
+            onClick={() => {
+              const el = document.getElementById('contact-cta');
+              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }}
+          >
+            Bepul dars olish
+          </button>
         </div>
       </div>
      </div>

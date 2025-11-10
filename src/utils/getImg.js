@@ -1,6 +1,6 @@
 export { default as navLogo } from '../assets/images/logo.svg'
 export { default as ogon } from '../assets/images/ogon.svg'
-export { default as man } from '../assets/images/man.webp'
+export { default as man } from '../assets/images/123.png'
 export { default as teacher } from '../assets/images/2.jpg'
 export { default as done } from '../assets/images/done.svg'
 export { default as card1 } from '../assets/images/card1.svg'

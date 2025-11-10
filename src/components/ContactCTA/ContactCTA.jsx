@@ -32,14 +32,14 @@ function ContactCTA() {
     { value: "xorazm", label: "Xorazm" },
   ];
   return (
-    <section className={styles.section}>
+    <section id="contact-cta" className={styles.section}>
       <div className="container">
         <div className={styles.box}>
           <div className={styles.wrap}>
             <div className={styles.text}>
               <div className={styles.badge}>ALOQA</div>
               <h3 className={styles.title}>
-                Xozroq ariza qoldiring va 5ta darsni bepulga oling!
+                Xoziroq ariza qoldiring va 5ta darsni bepulga oling!
               </h3>
               <p className={styles.subtitle}>
                 Aloqa uchun so’rovni to’ldiring — yaqin orada siz bilan
