@@ -58,6 +58,7 @@ export default function FeedbackSection() {
   const [startIndex, setStartIndex] = useState(0);
   const [activeIdx, setActiveIdx] = useState(0);
   const swiperRef = useRef(null);
+  const mobileSwiperRef = useRef(null);
   const [mainActiveIdx, setMainActiveIdx] = useState(0);
   const [mobileActiveIdx, setMobileActiveIdx] = useState(0);
 
@@ -143,6 +144,7 @@ export default function FeedbackSection() {
             }}
             onSwiper={(swiper) => {
               setMobileActiveIdx(swiper.realIndex);
+              mobileSwiperRef.current = swiper;
             }}
           >
             {feedbacks.map((f, i) => (
@@ -161,6 +163,20 @@ export default function FeedbackSection() {
               </SwiperSlide>
             ))}
           </Swiper>
+          <button
+            className={styles.prevBtn}
+            aria-label="Previous"
+            onClick={() => mobileSwiperRef.current && mobileSwiperRef.current.slidePrev()}
+          >
+            <FiArrowLeft />
+          </button>
+          <button
+            className={styles.nextBtn}
+            aria-label="Next"
+            onClick={() => mobileSwiperRef.current && mobileSwiperRef.current.slideNext()}
+          >
+            <FiArrowRight />
+          </button>
         </div>
         {/* ================================================================ */}
       </div>
