@@ -40,7 +40,7 @@ function ThankYou() {
             </p>
             <a
               className={styles.modalButton}
-              href="https://t.me/"
+              href="https://t.me/ameen_uz"
               target="_blank"
               rel="noreferrer"
             >
