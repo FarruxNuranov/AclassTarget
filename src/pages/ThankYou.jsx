@@ -31,12 +31,14 @@ function ThankYou() {
                 <span className={styles.modalIconCheck}>✓</span>
               </div>
             </div>
-            <h3 className={styles.modalTitle}>Ваша заявка успешно принята!</h3>
+            <h3 className={styles.modalTitle}>
+              Sizning arizangiz qabul qilindi!
+            </h3>
             <p className={styles.modalText}>
-              Скоро с вами свяжется наш менеджер.
+              Menejerimiz tez orada siz bilan bog‘lanadi.
             </p>
             <p className={styles.modalSubText}>
-              Все актуальные новости в нашем Telegram-канале:
+              Barcha yangiliklar bizning Telegram kanalimizda:
             </p>
             <a
               className={styles.modalButton}
@@ -44,7 +46,7 @@ function ThankYou() {
               target="_blank"
               rel="noreferrer"
             >
-              ПЕРЕЙТИ В TELEGRAM
+              TELEGRAMGA KIRISH
             </a>
           </div>
         </div>
