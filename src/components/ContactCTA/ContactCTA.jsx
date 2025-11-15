@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./ContactCTA.module.scss";
 import { Select } from "antd";
 
 function ContactCTA() {
   const [phone, setPhone] = useState("+998 ");
+  const navigate = useNavigate();
   const prefix = "+998 ";
   const formatUzPhone = (val) => {
     let digits = String(val).replace(/[^\d]/g, "");
@@ -13,14 +15,23 @@ function ContactCTA() {
     const b = digits.slice(2, 5);
     const c = digits.slice(5, 7);
     const d = digits.slice(7, 9);
-    return [prefix, a, a && b ? " " : "", b, b && c ? " " : "", c, c && d ? " " : "", d]
+    return [
+      prefix,
+      a,
+      a && b ? " " : "",
+      b,
+      b && c ? " " : "",
+      c,
+      c && d ? " " : "",
+      d,
+    ]
       .filter(Boolean)
       .join("");
   };
   const regionOptions = [
     { value: "andijon", label: "Andijon" },
     { value: "buxoro", label: "Buxoro" },
-    { value: "fargona", label: "Fargʻona"},
+    { value: "fargona", label: "Fargʻona" },
     { value: "jizzax", label: "Jizzax" },
     { value: "namangan", label: "Namangan" },
     { value: "navoiy", label: "Navoiy" },
@@ -46,7 +57,13 @@ function ContactCTA() {
                 bog’lanamiz.
               </p>
             </div>
-            <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+            <form
+              className={styles.form}
+              onSubmit={(e) => {
+                e.preventDefault();
+                navigate("/thanks");
+              }}
+            >
               <input className={styles.input} placeholder="Ismingiz" />
               <input
                 className={styles.input}
@@ -60,7 +77,8 @@ function ContactCTA() {
                 onChange={(e) => setPhone(formatUzPhone(e.target.value))}
                 onKeyDown={(e) => {
                   const pos = e.currentTarget.selectionStart ?? 0;
-                  const blockBack = e.key === "Backspace" && pos <= prefix.length;
+                  const blockBack =
+                    e.key === "Backspace" && pos <= prefix.length;
                   const blockDel = e.key === "Delete" && pos < prefix.length;
                   if (blockBack || blockDel) e.preventDefault();
                 }}
@@ -75,7 +93,6 @@ function ContactCTA() {
                 className={styles.select}
                 placeholder="Viloyatingiz"
                 options={regionOptions}
-               
               />
               <button className={styles.button} type="submit">
                 Yuborish
