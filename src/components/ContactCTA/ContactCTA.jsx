@@ -1,9 +1,7 @@
-
 import styles from "./ContactCTA.module.scss";
-
+import AmoForm from "../AmoForm/AmoForm";
 
 function ContactCTA() {
-  
   return (
     <section id="contact-cta" className={styles.section}>
       <div className="container">
@@ -19,7 +17,9 @@ function ContactCTA() {
                 bog’lanamiz.
               </p>
             </div>
-          
+            <div className={styles.formWrapper}>
+              <AmoForm />
+            </div>
           </div>
         </div>
       </div>
