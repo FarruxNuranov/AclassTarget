@@ -12,7 +12,7 @@ function HeadersAlt() {
           <div className={styles.badge}>
             {" "}
             <img src={ogon} alt="" />
-            <span>Profwssional HR Kursi</span>
+            <span>Professional HR Kursi</span>
           </div>
           <h1 className={styles.title}>
             Ariza qoldiring va 5 darsni bepulga oling! 

@@ -8,7 +8,7 @@ function AmoForm() {
 
   useEffect(() => {
     // Если скрипт уже инициализирован, второй раз не подключаем
-    if (document.getElementById("amoforms_script_1631090")) {
+    if (document.getElementById("amoforms_script_1672210")) {
       return;
     }
 
@@ -27,8 +27,8 @@ function AmoForm() {
             a[o + r].f = (a[o + r].f || []).concat([f]);
           }),
         a[o + r]({
-          id: "1631090",
-          hash: "47ea286ed3a6da1558fbb8409c82f1d8",
+          id: "1672210",
+          hash: "0757972e108e37d8f2bdaed4117c5743",
           locale: "ru",
         }),
         (a[o + m2] =
@@ -40,11 +40,11 @@ function AmoForm() {
 
     // Подключаем внешний скрипт amoCRM
     const externalScript = document.createElement("script");
-    externalScript.id = "amoforms_script_1631090";
+    externalScript.id = "amoforms_script_1672210";
     externalScript.async = true;
     externalScript.charset = "utf-8";
     externalScript.src =
-      "https://forms.amocrm.ru/forms/assets/js/amoforms.js?1763386325";
+      "https://forms.amocrm.ru/forms/assets/js/amoforms.js?1771497082";
 
     const current = containerRef.current || document.body;
     current.appendChild(inlineScript);
