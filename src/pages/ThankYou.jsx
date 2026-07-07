@@ -7,6 +7,13 @@ function ThankYou() {
   useEffect(() => {
     // Откроем модалку сразу после перехода на страницу
     setOpen(true);
+
+    // На /thanks пользователь попадает только после успешной отправки формы
+    // (redirect настроен в amoCRM). Значит это конверсия — шлём событие Lead
+    // в Meta Pixel, чтобы оптимизировать рекламу по заявкам, а не по просмотрам.
+    if (typeof window !== "undefined" && typeof window.fbq === "function") {
+      window.fbq("track", "Lead");
+    }
   }, []);
 
   return (
